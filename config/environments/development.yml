@@ -1,4 +1,4 @@
-secret_key_base: gbLY7eeqaqQvZVcdAxe93zpjJW6-aVluEdAPvjrQJ0Q
+secret_key_base: ENV['CRYSTAL_CLEAR_SECRET_KEY']
 port: 3000
 name: crystal-clear-book-search
 
@@ -15,7 +15,7 @@ process_count: 1
 # ssl_key_file:
 # ssl_cert_file:
 redis_url: "redis://localhost:6379"
-database_url: postgres://postgres:password@localhost:5432/crystal_clear_book_search_development
+database_url: ENV["CRYSTAL_CLEAR_DB_URL"]
 auto_reload: true
 
 session:
