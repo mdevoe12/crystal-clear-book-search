@@ -25,6 +25,9 @@ dependencies:
     github: amberframework/granite
     version: ~> 0.21.0
 
+  micrate:
+    github: juanedi/micrate
+
   quartz_mailer:
     github: amberframework/quartz-mailer
     version: ~> 0.7.0
