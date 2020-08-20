@@ -30,6 +30,7 @@ Amber::Server.configure do
   routes :web do
     
       get "/", HomeController, :index
+      get "/api/v1/search", SearchController, :search
     
   end
 
