@@ -1,6 +1,10 @@
 class OpenLibraryService
+  BASE_URL = "http://openlibrary.org/search.json?author=gaiman"
+
   def self.get
-    response = { message: "hello world from service" }
-    response.to_json
+    response = HTTP::Client.get(BASE_URL)
+
+    response.body.to_json
+
   end
 end
