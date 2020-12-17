@@ -1,11 +1,14 @@
-require "../../../services/open_library_service.cr"
+require "../../../services/open_library_getter.cr"
 
 class SearchController < ApplicationController
   def search
-    OpenLibraryService.get(params: search_params)
+    OpenLibraryGetter.new.call(params: search_params)
   end
 
   private def search_params
-    { author: params[:author] }
+    {
+      "author" => params[:author],
+      "title" => params[:title]
+    }
   end
 end
