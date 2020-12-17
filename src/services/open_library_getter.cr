@@ -7,13 +7,6 @@ class OpenLibraryGetter
   getter base_url : String = BASE_URL
 
   def call(params : Hash)
-    rest_client.get(base_url, params: sanitized_params(params: params))
-  end
-
-  private def sanitized_params(params : Hash)
-    {
-      :author => params["author"],
-      :title => params["title"]
-    } 
+    rest_client.get(base_url, params: params)
   end
 end
